@@ -4,11 +4,26 @@ import java.util.Map;
 import java.util.Arrays;
 import java.util.HashMap;
 
+/**
+ * class shares the implementation of Fibonacci sequence in 
+ * recursive optimised and unoptimised implementation
+ * @author blitz
+ */
 public class Fibonacci {
+  /**
+   * optimised Fibonacci sequence implementation with recursion
+   * @param num number whose fibonacci sequence value we want to calculate
+   * @return the fibonacci sequence value of the number
+   */
   public static int getFibonacciOptimised(int num) {
     return getFibonacciOptimised(num, new HashMap<Integer, Integer>());
   }
 
+  /**
+   * @param num number whose fibonacci sequence value we want to calculate
+   * @param map hash-map of fibonacci values of the numbers
+   * @return the fibonacci value of the number
+   */
   public static int getFibonacciOptimised(int num, Map<Integer, Integer> map) {
     if (map.containsKey(num)) {
       return map.get(num);
@@ -23,6 +38,11 @@ public class Fibonacci {
     }
   }
 
+  /**
+   * unoptimised recursive Fibonacci sequence calculation
+   * @param num number whose fibonacci sequence value we want to calculate
+   * @return the fibonacci value of the number
+   */
   public static int getFibonacci(int num) {
     if (num == 0) {
       return 0;

@@ -13,7 +13,7 @@ public class Tribonacci {
    * relations provided:
    *    * Tn+3 = Tn + Tn+1 + Tn+2
    *    * T0 = 0, T1 = 1, T2 = 1
-   * @param int num
+   * @param num whose value we want to calculate
    * @return the tribonacci value of the num
    */
   private static int getTribonacci(int num) {
@@ -27,9 +27,9 @@ public class Tribonacci {
 
   /**
    * below is the implementation of the dynamic-programming
-   * a <em>Map</em> object is passed to retain the memoization (cacheing)
-   * @param int num
-   * @param Map<Integer, Integer> map
+   * a <em>Map</em> object is passed to retain the memoization (caching)
+   * @param num whose value we want to calculate
+   * @param map HashMap to cache the values
    * @return the tribonacci result of the number
    */
   private static int getTribonacci(int num, Map<Integer, Integer> map) {
